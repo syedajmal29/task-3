@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> tasks</title>
+        
+    </head>
+    <body>
+        <script>
+            var obj1 = {
+                name: "person 1",
+                age: 5
+            };
+            var obj2 ={
+                age: 5,
+                name: "person 1"
+            };
+              // define the function check
+              function check(obj1, obj2){
+                 
+                //iterate the obj2 using for and in
+                for(key in obj2){
+                    //check if both objects do not have the equal values of the same
+                    if(obj1[key] !== obj2[key]){
+                        return false;
+                    }
+                }
+                return true
+              }
+              // calling the function 
+              console.log(check(obj1,obj2));
+            </script>
+    </body>
+
+</html>

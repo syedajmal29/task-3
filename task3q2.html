@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Task-3</title>
+    </head>
+    <body>
+
+        <script>
+            var xhr = new XMLHttpRequest()// it is in build method
+
+            xhr.open("GET","https://restcountries.com/v3.1/all/",true)
+            xhr.onload = function (){
+                if(xhr.status >= 200 && xhr.status <300 ){
+                    var response = JSON.parse(xhr.responseText);
+                    for(var i=0; i<response.length; i++){
+                        console.log(response[i].flags);
+                    }
+                }else{
+                    console.log("The request failed");
+                }
+            }
+
+            xhr.send()
+
+
+            
+            
+        </script>
+    </body>
+</html>
